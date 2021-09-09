@@ -5,6 +5,9 @@
   helm show values bitnami/mariadb > values.yml
   config on demand in values.yml
     config line 90 architecture: replication
+    
+    config line 95 auth:...
+
     config line 280 primary.resources.limit
     config line 285 primary.resources.requests
     config line 378 primary.persistent.storageClass: "nfs-client"
