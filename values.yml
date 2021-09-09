@@ -89,7 +89,7 @@ image:
   debug: false
 ## @param architecture MariaDB architecture (`standalone` or `replication`)
 ##
-architecture: standalone
+architecture: replication
 ## MariaDB Authentication parameters
 ##
 auth:
