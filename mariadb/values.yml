@@ -89,7 +89,7 @@ image:
   debug: false
 ## @param architecture MariaDB architecture (`standalone` or `replication`)
 ##
-architecture: standalone
+architecture: replication
 ## MariaDB Authentication parameters
 ##
 auth:
@@ -277,15 +277,15 @@ primary:
   ##
   resources:
     ## Example:
-    ## limits:
-    ##    cpu: 100m
-    ##    memory: 256Mi
-    limits: {}
+    limits:
+        cpu: 300m
+        memory: 500Mi
+    ## limits: {}
     ## Examples:
-    ## requests:
-    ##    cpu: 100m
-    ##    memory: 256Mi
-    requests: {}
+    requests:
+        cpu: 100m
+        memory: 256Mi
+    ## requests: {}
   ## Configure extra options for liveness probe
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#configure-probes
   ## @param primary.livenessProbe.enabled Enable livenessProbe
@@ -385,7 +385,7 @@ primary:
       - ReadWriteOnce
     ## @param primary.persistence.size MariaDB primary persistent volume size
     ##
-    size: 1Gi
+    size: 8Gi
     ## @param primary.persistence.selector Selector to match an existing Persistent Volume
     ## selector:
     ##   matchLabels:
@@ -677,7 +677,7 @@ secondary:
     ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
     ##   GKE, AWS & OpenStack)
     ##
-    storageClass: ""
+    storageClass: "nfs-client"
     ## @param secondary.persistence.annotations MariaDB secondary persistent volume claim annotations
     ##
     annotations: {}

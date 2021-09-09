@@ -4,9 +4,13 @@
   helm repo add bitnami https://charts.bitnami.com/bitnami
   helm show values bitnami/mariadb > values.yml
   config on demand in values.yml
-    config line 378 persistent.storageClass: "nfs-client"
-    conif line 388 persistent.size: 1Gi
-  helm install hit-mysql bitnami/mariadb -f mysql.values
+    config line 90 architecture: replication
+    config line 280 primary.resources.limit
+    config line 285 primary.resources.requests
+    config line 378 primary.persistent.storageClass: "nfs-client"
+    config secondary similar primary
+
+  helm install hit-mariadb bitnami/mariadb -f values
 ```
 ### Ref
 - https://artifacthub.io/packages/helm/bitnami/mariadb
