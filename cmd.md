@@ -1,1 +1,0 @@
-helm install my-release bitnami/mariadb -f values.yaml
