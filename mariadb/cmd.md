@@ -2,5 +2,5 @@
 ```console
 k get storageclass
 k get pvc
-k logs my-mariadb-0 -f
+k logs services-db-mariadb-primary-0 -f
 ```

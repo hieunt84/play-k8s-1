@@ -385,7 +385,7 @@ primary:
       - ReadWriteOnce
     ## @param primary.persistence.size MariaDB primary persistent volume size
     ##
-    size: 8Gi
+    size: 1Gi
     ## @param primary.persistence.selector Selector to match an existing Persistent Volume
     ## selector:
     ##   matchLabels:
@@ -583,15 +583,15 @@ secondary:
   ##
   resources:
     ## Example:
-    ## limits:
-    ##    cpu: 100m
-    ##    memory: 256Mi
-    limits: {}
+    limits:
+        cpu: 300m
+        memory: 512Mi
+    ## limits: {}
     ## Examples:
-    ## requests:
-    ##    cpu: 100m
-    ##    memory: 256Mi
-    requests: {}
+    requests:
+        cpu: 100m
+        memory: 256Mi
+    ## requests: {}
   ## Configure extra options for liveness probe
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#configure-probes
   ## @param secondary.livenessProbe.enabled Enable livenessProbe
@@ -687,7 +687,7 @@ secondary:
       - ReadWriteOnce
     ## @param secondary.persistence.size MariaDB secondary persistent volume size
     ##
-    size: 8Gi
+    size: 1Gi
     ## @param secondary.persistence.selector Selector to match an existing Persistent Volume
     ## selector:
     ##   matchLabels:
