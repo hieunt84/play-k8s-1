@@ -563,7 +563,8 @@ secondary:
   ##
   podSecurityContext:
     enabled: true
-    fsGroup: 1001
+    ## fsGroup: 1001
+    fsGroup: 0
   ## MariaDB secondary container security context
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
   ## @param secondary.containerSecurityContext.enabled MariaDB secondary container securityContext
@@ -571,7 +572,8 @@ secondary:
   ##
   containerSecurityContext:
     enabled: true
-    runAsUser: 1001
+    ## runAsUser: 1001
+    runAsUser: 0
   ## MariaDB secondary container's resource requests and limits
   ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
   ## We usually recommend not to specify default resources and to leave this as a conscious

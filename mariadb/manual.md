@@ -13,6 +13,8 @@
     config line 378 primary.persistent.storageClass: "nfs-client"
     
     config secondary similar primary
+    
+    config secondary line 564 and 573
 
   helm install services-db bitnami/mariadb -f values.yml
 ```
