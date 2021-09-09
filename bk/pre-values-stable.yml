@@ -232,7 +232,7 @@ master:
     ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
     ##   GKE, AWS & OpenStack)
     ##
-    storageClass: "nfs-client"
+    # storageClass: "-"
     ## Persistent Volume Claim annotations
     ##
     annotations: {}
@@ -368,7 +368,7 @@ slave:
     ## If true, use a Persistent Volume Claim, If false, use emptyDir
     ##
     enabled: true
-    storageClass: "nfs-client"
+    # storageClass: "-"
     annotations:
     accessModes:
     - ReadWriteOnce
