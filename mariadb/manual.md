@@ -16,6 +16,8 @@
     
     config secondary line 564 and 573
 
+    config line 789 volumePermissions.enable: true
+
   helm install services-db bitnami/mariadb -f values.yml
 ```
 ### Ref
