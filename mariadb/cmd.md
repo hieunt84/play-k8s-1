@@ -8,5 +8,5 @@ k scale sts/my-release-mariadb-secondary --replicas=2
 ```
 ### Command helm
 ```console
-helm install my-release bitnami/mariadb -f values.yaml
+helm install mariadb bitnami/mariadb -f values.yaml
 ```
