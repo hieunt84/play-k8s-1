@@ -1,4 +1,4 @@
-### Deploy mysql using persistent volume
+### Deploy mariadb using persistent volume nfs
 ```console
   helm search hub mariadb
   helm repo add bitnami https://charts.bitnami.com/bitnami
@@ -10,7 +10,7 @@
     config primary:...
       persistent.storageClass: "nfs-client"    
     config secondary similar primary ...
-  helm install my-release bitnami/mariadb -f values.yaml
+  helm install mariadb bitnami/mariadb -f values.yaml
 ```
 ### Ref
 - https://artifacthub.io/packages/helm/bitnami/mariadb
